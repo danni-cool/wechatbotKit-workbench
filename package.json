@@ -4,7 +4,7 @@
   "description": "An SDK compatible with different WeChat providers",
   "main": "index.js",
   "scripts": {
-    "watch": "nodemon",
+    "watch": "tsc -w",
     "lint": "npx oxlint && npx eslint",
     "build": "tsc && swc src -d dist/esm",
     "prepare": "husky"
