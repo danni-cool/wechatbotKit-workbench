@@ -1,0 +1,41 @@
+{
+  "name": "wechatbotKit-core",
+  "version": "0.0.1",
+  "description": "An SDK compatible with different WeChat providers",
+  "main": "index.js",
+  "scripts": {
+    "watch": "nodemon",
+    "lint": "npx oxlint && npx eslint",
+    "build": "tsc && swc src -d dist/esm",
+    "prepare": "husky"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}": [
+      "./scripts/tsc-lint.sh",
+      "oxlint",
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^19.1.0",
+    "@swc/cli": "^0.3.10",
+    "@swc/core": "^1.4.11",
+    "@types/node": "^20.11.30",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-oxlint": "^0.2.7",
+    "eslint-plugin-prettier": "^5.1.3",
+    "husky": "^9.0.11",
+    "oxlint": "^0.2.14",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.3"
+  }
+}
