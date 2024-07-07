@@ -1,2 +1,2 @@
 # wechatbotKit-core
-An SDK compatible with different WeChat providers
+A WeChat Bot Plugin and Management System
